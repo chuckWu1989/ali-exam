@@ -1,0 +1,52 @@
+@preferColor: #2ca9e1;
+@white: #ffffff;
+@hoverColor: #89c3eb;
+@errorColor: #c9171e;
+.ipv4-converter-style {
+  font-family: Microsoft JhengHei;
+  width: 100%;
+  .ipv4-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    width: 40%;
+  }
+  .ipv4-input {
+    width: 60%;
+  }
+  .ipv4-input, .ipv4-title {
+    float: left;
+  }
+  input[type=text] {
+    border: none;
+    border-bottom: solid 2px @preferColor;
+    margin-left: 20px;
+    font-size: 16px;
+    text-align: center;
+    width: 60%;
+  }
+  input[type=button] {
+    border: none;
+    background-color: @preferColor;
+    color: @white;
+    margin: 20px 0;
+    border-radius: 60px;
+    width: 60px;
+    height: 60px;
+  }
+  input[type=button]:hover {
+    cursor: pointer;
+    background-color: @hoverColor;
+  }
+  input:focus {
+    outline: none;
+  }
+  .error {
+    color: @errorColor;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .btn-area {
+    margin: auto;
+  }
+}
