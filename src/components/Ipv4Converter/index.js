@@ -33,7 +33,7 @@ class Ipv4Converter extends Component {
     } = this.props;
     return (
       <div className="ipv4-converter-style">
-        <div>
+        <div className="input-area">
           <div className="ipv4-title">
             {ipv4Title}
           </div>
@@ -44,12 +44,12 @@ class Ipv4Converter extends Component {
         <div className="btn-area">
           <input type="button" value={transferBtnTitle} onClick={transfer} />
         </div>
-        <div>
+        <div className="input-area">
           <div className="ipv4-title">
             {intTitle}
           </div>
           <div className="ipv4-input">
-            <input type="text" value={intValue} />
+            <input type="text" value={intValue} readOnly />
             <div className="error">{error}</div>
           </div>
         </div>

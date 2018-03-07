@@ -7,8 +7,7 @@
     "babel",
     "react",
     "promise",
-    "jsx-a11y",
-    "jest"
+    "jsx-a11y"
   ],
   "env": {
     "browser" : true

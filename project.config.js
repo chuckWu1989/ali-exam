@@ -56,10 +56,10 @@ module.exports = {
   fontSize: argv.fontsize || 10000,
   /** The setting of the coverage threshold */
   coverageThreshold: argv.threshold || {
-    statements: 50,
-    branches: 50,
-    functions: 50,
-    lines: 50,
+    statements: 30,
+    branches: 30,
+    functions: 30,
+    lines: 30,
   },
   /** The list of modules to bundle separately from the core application code */
   vendors: [

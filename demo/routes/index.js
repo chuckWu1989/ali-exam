@@ -14,7 +14,7 @@ const MyRouter = () => (
       </div>
       <div className="content-body">
         <Switch>
-          <Route exact path="/" component={lazyLoading(() => import('./Ipv4ToInt'))} />
+          <Route exact path="/" component={lazyLoading(() => import('./Home'))} />
         </Switch>
       </div>
     </div>

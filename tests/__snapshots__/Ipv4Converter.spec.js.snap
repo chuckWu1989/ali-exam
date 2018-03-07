@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ipv4Converter component should be rendered properly 1`] = `
+<div
+  className="ipv4-converter-style"
+>
+  <div
+    className="input-area"
+  >
+    <div
+      className="ipv4-title"
+    >
+      IPV4 test title
+    </div>
+    <div
+      className="ipv4-input"
+    >
+      <input
+        onChange={[Function]}
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    className="btn-area"
+  >
+    <input
+      onClick={[Function]}
+      type="button"
+      value="Transfer"
+    />
+  </div>
+  <div
+    className="input-area"
+  >
+    <div
+      className="ipv4-title"
+    >
+      Int test title
+    </div>
+    <div
+      className="ipv4-input"
+    >
+      <input
+        readOnly={true}
+        type="text"
+        value="test value"
+      />
+      <div
+        className="error"
+      />
+    </div>
+  </div>
+</div>
+`;

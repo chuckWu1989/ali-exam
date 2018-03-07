@@ -20,19 +20,21 @@
   input[type=text] {
     border: none;
     border-bottom: solid 2px @preferColor;
-    margin-left: 20px;
     font-size: 16px;
     text-align: center;
-    width: 60%;
+    width: 100%;
   }
   input[type=button] {
     border: none;
     background-color: @preferColor;
     color: @white;
-    margin: 20px 0;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 60px;
     width: 60px;
     height: 60px;
+    display: inherit;
   }
   input[type=button]:hover {
     cursor: pointer;
@@ -45,6 +47,11 @@
     color: @errorColor;
     font-weight: bold;
     font-size: 14px;
+    text-align: center;
+  }
+  .input-area {
+    width: 100%;
+    height: 40px;
   }
   .btn-area {
     margin: auto;
