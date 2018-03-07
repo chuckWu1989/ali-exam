@@ -10,11 +10,11 @@ const MyRouter = () => (
         <div>Alibaba Exam</div>
       </div>
       <div className="navigator">
-        <span className="item"><Link to="/">Home</Link></span>
+        <span className="item"><Link to="">Home</Link></span>
       </div>
       <div className="content-body">
         <Switch>
-          <Route exact path="/" component={lazyLoading(() => import('./Home'))} />
+          <Route exact path="" component={lazyLoading(() => import('./Home'))} />
         </Switch>
       </div>
     </div>
