@@ -1,0 +1,50 @@
+defaults: &defaults
+  working_directory: /tmp/ali-exam
+  docker:
+    - image: circleci/node:7.10
+restore_repo: &restore_repo
+  restore_cache:
+    keys:
+      - v1-dependencies-{{ .Branch }}-{{ .Revision }}
+version: 2
+jobs:
+  build:
+    <<: *defaults
+    steps:
+      - *restore_repo
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm install
+      - save_cache:
+          paths:
+            - /tmp/ali-exam
+          key: v1-dependencies-{{ .Branch }}-{{ .Revision }}
+  test:
+    <<: *defaults
+    steps:
+      - *restore_repo
+      - run:
+          name: Unit Testing
+          command: npm test
+      - run:
+          name: Coverage Testing
+          command: npm run test:coverage
+      - run:
+          name: Post Coverage Report
+          command: bash <(curl -s https://codecov.io/bash)
+
+all_tags: &all_tags
+  filters:
+    branches:
+      only: master
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build:
+          <<: *all_tags
+      - test:
+          <<: *all_tags
+          requires:
+            - build
